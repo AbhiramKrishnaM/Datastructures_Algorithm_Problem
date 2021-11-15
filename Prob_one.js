@@ -19,14 +19,20 @@ const target = 11;
 function findPositionTarget(array, target) {
   for (var i = 0; i < array.length; i++) {
     p = i;
-
+    console.log(" ");
+    console.log({p, value: array[i]});
+    console.log(" ");
     var numberToFind = target - array[p];
+    console.log({numberToFind, target});
+    console.log(" ");
     for (var j = p + 1; j < array.length; j++) {
-      if (array[j] == numberToFind) {
+      console.log({j, value: array[j]});
+      if (array[j] === numberToFind) {
         return [p, j];
       }
     }
   }
+  return null;
 }
 
 console.log(findPositionTarget(array, target));
